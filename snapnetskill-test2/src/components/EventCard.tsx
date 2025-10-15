@@ -1,4 +1,4 @@
-import { Event } from ".";
+import type { Event } from "../types";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -8,11 +8,6 @@ interface Props {
 export default function EventCard({ event }: Props) {
   return (
     <div className="border rounded-xl p-4 shadow-sm hover:shadow-md transition">
-      <img
-        src={event.imageUrl}
-        alt={event.title}
-        className="rounded-lg h-40 w-full object-cover mb-3"
-      />
       <h2 className="text-lg font-semibold">{event.title}</h2>
       <p className="text-gray-600">{event.location}</p>
       <p className="text-sm text-gray-500">
